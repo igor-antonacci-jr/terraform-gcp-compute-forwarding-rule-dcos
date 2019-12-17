@@ -54,7 +54,8 @@ module "dcos-forwarding-rule-masters" {
 }
 
 module "dcos-forwarding-rule-public-agents" {
-  source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
+  #source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
+  source = "github.com/igor-antonacci-jr/terraform-gcp-compute-forwarding-rule-public-agents"
   version = "~> 0.2.0"
 
   cluster_name = "${var.cluster_name}"
